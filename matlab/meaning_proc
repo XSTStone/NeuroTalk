@@ -1,0 +1,15 @@
+function [epo,w,la] = proc_multicsp(epo,nComps,centered,method,way);
+输入参数：
+epo  某种数据结构
+field x (nTimes,nChan,nTrials) and field y for the labels
+如果输入的epo有 optimise 字段，它的值将被添加到另一个名为 optimise 的变量中。
+nComps 提取的组件数量
+每个类的pattern数量 ？
+centered 布尔值，是否要进行中心化
+method 算法（CSP）
+way 处理的方向或者类型
+
+输出：
+w 权重矩阵
+la 特征
+作为矩阵 nComps*nClasses 的相应特征值
